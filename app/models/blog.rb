@@ -12,11 +12,11 @@ class Blog < ActiveRecord::Base
 
   attr_accessor :custom_permalink
 
-  validate(:on => :create) { |blog|
-    unless Blog.count.zero?
-      blog.errors.add(:base, "There can only be one...")
-    end
-  }
+  # validate(:on => :create) { |blog|
+  #   unless Blog.count.zero?
+  #     blog.errors.add(:base, "There can only be one...")
+  #   end
+  # }
 
   validates :blog_name, :presence => true
 
